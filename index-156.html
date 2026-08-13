@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Incinerator Hood — a public, auditable redistribution rail for the on-chain commons. Join the whitelist to get early access.">
+  <meta name="keywords" content="incinerator hood, whitelist, on-chain, redistribution, crypto community, IH token">
+  <meta name="author" content="Incinerator Hood">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07100d">
+  <link rel="canonical" href="https://inerator.fun/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Incinerator Hood — Public Redistribution Rail">
+  <meta property="og:description" content="A public, auditable redistribution rail for the on-chain commons. Join the whitelist to get early access.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inerator.fun/">
+  <meta property="og:site_name" content="Incinerator Hood">
+  <meta property="og:image" content="https://inerator.fun/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Incinerator Hood — Public Redistribution Rail">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Incinerator Hood — Public Redistribution Rail">
+  <meta name="twitter:description" content="A public, auditable redistribution rail for the on-chain commons. Join the whitelist to get early access.">
+  <meta name="twitter:image" content="https://inerator.fun/og-image.png">
+  <meta name="twitter:site" content="@Incineratorhood">
+  <meta name="twitter:creator" content="@Incineratorhood">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <title>Incinerator Hood — Public Redistribution Rail</title>
+  <style>
+    :root{--acid:#c8ff3d;--acid-dim:#8aa92c;--ink:#07100d;--deep:#0a1713;--panel:#0d2019;--line:rgba(200,255,61,.22);--muted:#a3b8a0}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:#d9e8d2;font-family:"Courier New",monospace}
+    button{font:inherit}
+    a{color:inherit}
+    :focus-visible{outline:2px solid var(--acid);outline-offset:2px;border-radius:1px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .crh-skip{position:absolute;top:-100px;left:12px;z-index:50;background:var(--acid);color:var(--ink);padding:10px 16px;font-size:11px;font-weight:700;letter-spacing:.08em;text-decoration:none;transition:top .15s ease}
+    .crh-skip:focus{top:12px}
+    .crh-shell{min-height:100vh;background:radial-gradient(ellipse at 50% -15%,#183822 0%,#0b1713 40%,#07100d 79%);position:relative;overflow:hidden}
+    .crh-shell:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:linear-gradient(rgba(200,255,61,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(200,255,61,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000 0%,transparent 80%)}
+    .crh-shell:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+    .crh-nav{height:64px;border-bottom:1px solid rgba(200,255,61,.16);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,60px);position:relative;z-index:4}
+    .crh-brand{display:flex;align-items:center;gap:10px;color:var(--acid);font-size:12px;letter-spacing:.1em;font-weight:700;background:transparent;border:0;cursor:pointer;padding:4px}
+    .crh-brand small{color:#e8f2d8;font-size:10px;letter-spacing:.18em;font-weight:400}
+    .crh-navlinks{display:flex;gap:6px;align-items:center}
+    .crh-navlinks button,.crh-connect,.crh-menu{font:inherit;color:#a9bea7;background:transparent;border:1px solid rgba(200,255,61,.28);padding:8px 13px;font-size:10px;letter-spacing:.12em;cursor:pointer;transition:.2s ease}
+    .crh-navlinks button:hover,.crh-menu:hover{color:var(--acid);border-color:var(--acid);background:rgba(200,255,61,.06)}
+    .crh-connect{color:var(--acid);border-color:var(--acid);display:flex;align-items:center;gap:8px}
+    .crh-connect:hover{background:var(--acid);color:var(--ink);box-shadow:0 0 24px rgba(200,255,61,.16)}
+    .crh-connect.is-connected{background:rgba(200,255,61,.08)}
+    .crh-connect .chain-dot{width:6px;height:6px;border-radius:50%;background:var(--acid);box-shadow:0 0 8px var(--acid)}
+    .crh-connectwrap{position:relative}
+    .crh-walletpicker{position:absolute;right:0;top:calc(100% + 8px);width:238px;padding:8px;background:#0c1b15;border:1px solid var(--acid);box-shadow:0 14px 40px #0008;z-index:20;display:grid;gap:3px}
+    .crh-walletpicker .picker-label{font-size:9px;letter-spacing:.14em;color:#8ea38c;padding:8px 8px 4px}
+    .crh-walletpicker button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;font-size:11px;color:#d9e8d2;background:transparent;border:0;padding:10px 8px;cursor:pointer}
+    .crh-walletpicker button:hover{background:rgba(200,255,61,.1);color:var(--acid)}
+    .crh-walletpicker button img{width:18px;height:18px;border-radius:4px;flex-shrink:0}
+    .crh-walletpicker .picker-empty{font-size:10px;color:#9db29e;line-height:1.7;padding:8px}
+    .crh-walletpicker .picker-empty a{color:var(--acid);text-decoration:underline}
+    .crh-walletpicker .picker-disconnect{border-top:1px solid rgba(200,255,61,.15);margin-top:4px;padding-top:8px;color:#f2b8a3}
+    .crh-walletpicker .picker-disconnect:hover{background:rgba(255,120,90,.1);color:#ffb199}
+    .crh-menu{display:none;padding:8px}
+    .crh-navpanel{position:absolute;right:18px;top:56px;width:214px;padding:10px;background:#0c1b15;border:1px solid var(--acid);box-shadow:0 14px 40px #0008;display:grid;gap:3px}
+    .crh-navpanel button{text-align:left;font:inherit;font-size:10px;letter-spacing:.08em;color:#c3d4b8;background:transparent;border:0;padding:11px;cursor:pointer}
+    .crh-navpanel button:hover{background:rgba(200,255,61,.1);color:var(--acid)}
+    .crh-main{height:calc(100vh - 108px);overflow-y:auto;position:relative;z-index:1}
+    .crh-hero{max-width:1080px;margin:0 auto;min-height:calc(100vh - 108px);padding:clamp(22px,5vh,60px) 22px 38px;display:flex;flex-direction:column;justify-content:center}
+    .crh-kicker{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(200,255,61,.16);padding-bottom:12px;color:#94a897;font-size:10px;letter-spacing:.14em}
+    .crh-live{color:var(--acid);display:flex;align-items:center;gap:7px}.crh-live i{width:6px;height:6px;background:var(--acid);display:block;box-shadow:0 0 10px var(--acid);animation:pulse 1.8s infinite}
+    .crh-layout{display:grid;grid-template-columns:1fr minmax(340px,470px) 1fr;align-items:center;gap:clamp(20px,4vw,72px);padding:clamp(28px,5vh,62px) 0}
+    .crh-intro h1{font-family:"Trebuchet MS",sans-serif;font-size:clamp(36px,5vw,68px);line-height:.93;letter-spacing:-.055em;color:#e4f4d8;margin:0 0 19px}.crh-intro h1 span{color:var(--acid);font-style:italic}
+    .crh-intro p{color:#a3b8a0;font-size:12px;line-height:1.9;max-width:260px;margin:0 0 22px}
+    .crh-forest{color:var(--acid-dim);opacity:.85;display:block}
+    .crh-side{font-size:11px;color:#93a89b;line-height:1.8}.crh-side .line{border-left:1px solid var(--acid-dim);padding-left:13px;margin:13px 0}.crh-side strong{color:#d4e6ca;font-weight:400}.crh-side em{color:var(--acid);font-style:normal}
+    .crh-manifesto-link{background:transparent;border:0;font:inherit;display:flex;align-items:center;gap:8px;margin-top:20px;color:#c4d9bb;cursor:pointer;padding:6px 0}
+    .crh-manifesto-link:hover{color:var(--acid)}
+    .crh-card{background:linear-gradient(145deg,rgba(17,43,30,.94),rgba(7,18,13,.96));border:1px solid var(--acid);box-shadow:0 0 0 5px rgba(200,255,61,.035),0 20px 70px rgba(0,0,0,.4);padding:25px 26px 21px;position:relative}
+    .crh-card:before,.crh-card:after{content:"";position:absolute;width:9px;height:9px;border-color:var(--acid);border-style:solid}.crh-card:before{left:-1px;top:-1px;border-width:2px 0 0 2px}.crh-card:after{right:-1px;bottom:-1px;border-width:0 2px 2px 0}
+    .crh-cardhead{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,255,61,.15);padding-bottom:16px;margin-bottom:22px}.crh-cardhead label{font-size:10px;color:#b2c6ac;letter-spacing:.16em}.crh-code{font-size:9px;color:var(--acid);padding:5px 7px;border:1px solid rgba(200,255,61,.3)}
+    .crh-emblem{height:105px;display:flex;justify-content:center;align-items:center;color:var(--acid);position:relative}.crh-emblem:before{content:"";position:absolute;width:108px;height:108px;border:1px dashed rgba(200,255,61,.25);border-radius:50%;animation:spin 20s linear infinite}.crh-emblem svg{filter:drop-shadow(0 0 12px rgba(200,255,61,.28))}
+    .crh-card h2{text-align:center;font-family:"Trebuchet MS",sans-serif;font-size:22px;letter-spacing:-.04em;color:#ecf8e2;margin:12px 0 7px}.crh-card .sub{text-align:center;color:#8fa392;font-size:10px;line-height:1.7;margin:0 0 23px}
+    .crh-action{width:100%;padding:15px 16px;border:1px solid var(--acid);background:var(--acid);color:var(--ink);font:700 11px "Courier New",monospace;letter-spacing:.12em;cursor:pointer;display:flex;justify-content:center;align-items:center;gap:10px;transition:.2s}
+    .crh-action:hover{box-shadow:0 0 26px rgba(200,255,61,.28);transform:translateY(-2px)}.crh-action:active{transform:translateY(0)}.crh-action.armed{background:#eefbcf;color:#13210e}
+    .crh-action:disabled{cursor:progress;opacity:.85}
+    .crh-metrics{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(200,255,61,.14);margin-top:20px;padding-top:15px;gap:12px}.crh-metric label{display:block;color:#8ea38c;font-size:9px;letter-spacing:.1em;margin-bottom:7px}.crh-metric strong{font-size:12px;color:#d5e9c9;font-weight:400}.crh-metric strong.green{color:var(--acid)}
+    .crh-log{font-size:10px;color:#96ac91;margin-top:21px;display:flex;align-items:center;gap:8px}.crh-log b{color:var(--acid);font-weight:400}.crh-log .bar{height:1px;background:rgba(200,255,61,.2);flex:1}
+    .crh-underline{color:#93a897;font-size:10px;letter-spacing:.1em;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}.crh-underline span{color:var(--acid)}
+    .crh-section{max-width:1080px;margin:0 auto;padding:70px 22px 90px;border-top:1px solid rgba(200,255,61,.14)}
+    .crh-section-head{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+    .crh-section-head svg{flex-shrink:0;color:var(--acid)}
+    .crh-section h2{font-family:"Trebuchet MS",sans-serif;font-size:30px;color:#e8f5dc;margin:0}.crh-section p{color:#a3b8a0;font-size:12px;line-height:1.9;max-width:530px}
+    .crh-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+    .crh-step{border:1px solid rgba(200,255,61,.18);padding:19px;background:rgba(13,32,25,.7)}
+    .crh-step-top{display:flex;align-items:center;justify-content:space-between}
+    .crh-step b{color:var(--acid);font-size:12px}
+    .crh-step svg{color:var(--acid-dim)}
+    .crh-step h3{font-size:12px;color:#d8e9d0;font-weight:400;margin:18px 0 8px}.crh-step p{font-size:10px;margin:0;color:#9db29e}
+    .crh-ledger-panel{margin-top:28px}
+    .crh-ledger-row{display:flex;justify-content:space-between;font-size:10px;color:var(--acid)}
+    .crh-ledger-grid{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;font-size:10px;color:#a3b8a0}
+    .crh-ledger-grid b{color:#d9e8d2;font-weight:400}
+    .crh-footer{height:44px;border-top:1px solid rgba(200,255,61,.18);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,60px);font-size:10px;color:#93a897;position:fixed;bottom:0;left:0;right:0;background:rgba(7,16,13,.92);backdrop-filter:blur(10px);z-index:5}.crh-footer span{color:var(--acid)}.footer-right{display:flex;gap:20px}
+    .crh-toast{position:fixed;right:22px;bottom:62px;border:1px solid var(--acid);background:#112519;color:var(--acid);padding:12px 16px;font-size:10px;z-index:6;animation:toast-in .25s ease}
+    .icon{width:14px;height:14px;display:inline-block;vertical-align:-3px}.hidden{display:none}
+    .crh-noscript{max-width:1080px;margin:16px auto;padding:14px 22px;border:1px solid var(--acid);background:rgba(200,255,61,.06);color:#e4f4d8;font-size:11px;letter-spacing:.04em}
+    @keyframes pulse{50%{opacity:.35;transform:scale(.65)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes toast-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .crh-live i,.crh-emblem:before,.crh-toast,*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+    }
+    @media(max-width:820px){.crh-navlinks{display:none}.crh-menu{display:block}.crh-layout{grid-template-columns:1fr;gap:30px;text-align:center}.crh-intro p{margin:0 auto 22px}.crh-side{display:none}.crh-card{max-width:470px;margin:auto;width:100%}.crh-hero{padding-top:25px}.crh-kicker{font-size:9px}.crh-steps{grid-template-columns:1fr}.crh-section{padding-top:50px}.crh-shell{overflow:auto}.crh-main{height:auto;overflow:visible}.crh-footer{position:sticky}.crh-underline{margin-top:0}.crh-section-head{justify-content:center}.hidden-mobile{display:none}}
+    @media(max-width:420px){.crh-card{padding:21px 17px}.crh-intro h1{font-size:42px}.crh-footer{font-size:9px}.footer-right{gap:9px}}
+  </style>
+</head>
+<body>
+  <a class="crh-skip" href="#main">Skip to main content</a>
+  <noscript><p class="crh-noscript">JavaScript is off in your browser. Navigation and the whitelist form on this page need it to work — turn it on to use them.</p></noscript>
+  <div class="crh-shell">
+    <header class="crh-nav">
+      <button class="crh-brand" data-scroll="home" aria-label="Incinerator Hood — back to home">
+        <svg width="30" height="30" viewBox="0 0 76 76" fill="none" role="img" aria-label="Incinerator Hood emblem"><path d="M18 59V31L38 14L58 31V59" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/><path d="M27 59V43C27 37.5 31.9 33 38 33C44.1 33 49 37.5 49 43V59" stroke="currentColor" stroke-width="2.4"/><path d="M38 54C31.5 49.6 31.9 44 35.1 40.5C35.8 44 38.6 43.6 39.8 39.1C45.5 45.2 45.2 50.1 38 54Z" fill="currentColor"/><path d="M18 31L10 38M58 31L66 38M23 59H53" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg>
+        <span>INCINERATOR HOOD <small>/ IH.01</small></span>
+      </button>
+      <nav class="crh-navlinks" aria-label="Primary"><button data-scroll="protocol">PROTOCOL</button><button data-scroll="ledger">LEDGER</button><button data-scroll="help">HELP</button></nav>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button class="crh-connect" data-scroll="home"><span class="icon" aria-hidden="true">◈</span><span>JOIN WHITELIST</span></button>
+        <button class="crh-menu" id="menuBtn" aria-label="Open menu" aria-haspopup="true" aria-expanded="false" aria-controls="menuPanel">☰</button>
+      </div>
+      <nav class="crh-navpanel hidden" id="menuPanel" aria-label="Section menu">
+        <button data-scroll="protocol">01 / THE PROTOCOL</button><button data-scroll="ledger">02 / PUBLIC LEDGER</button><button data-scroll="help">03 / FIELD NOTES</button><button id="closeMenu">CLOSE TERMINAL ×</button>
+      </nav>
+    </header>
+    <main class="crh-main" id="main">
+      <section class="crh-hero" id="home">
+        <div class="crh-kicker"><span>SHERWOOD NODE // <time datetime="2026-08-13T04:17:00Z">04:17 UTC</time></span><span class="crh-live"><i aria-hidden="true"></i>DEMO MODE — NOT LIVE</span></div>
+        <p class="crh-noscript" style="margin:14px 0 0;">⚠ This is a design demo. The whitelist form below does not submit anywhere yet — wire it up to your own backend or form service before launch. The pool balance, "returned to date" total, and ledger entries below are placeholder sample data, not real on-chain activity.</p>
+        <div class="crh-layout">
+          <div class="crh-intro">
+            <h1>Take from<br>the <span>many.</span><br>Return to all.</h1>
+            <p>A public redistribution rail for the on-chain commons. No velvet ropes. No black boxes. Just receipts.</p>
+            <svg class="crh-forest" width="220" height="64" viewBox="0 0 220 64" fill="none" role="img" aria-label="Line illustration of a pine forest canopy, evoking Sherwood Forest">
+              <path d="M14 58 L14 42 M14 46 L4 46 M14 38 L6 38 M14 30 L20 30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M14 12 L2 34 H8 L0 46 H10 L4 58 H24 L18 46 H28 L20 34 H26 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M58 4 L44 30 H52 L42 44 H54 L47 58 H69 L62 44 H74 L64 30 H72 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M104 18 L92 38 H99 L90 50 H100 L95 58 H113 L108 50 H118 L109 38 H116 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M156 10 L142 34 H150 L140 46 H152 L145 58 H167 L160 46 H172 L162 34 H170 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M200 20 L189 38 H195 L187 50 H197 L192 58 H208 L203 50 H213 L205 38 H211 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M0 58 H220" stroke="currentColor" stroke-width="1" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="crh-card">
+            <div class="crh-cardhead"><label id="terminalLabel">WHITELIST SIGNUP</label><span class="crh-code">IH / 001</span></div>
+            <div class="crh-emblem"><svg width="76" height="76" viewBox="0 0 76 76" fill="none" aria-hidden="true"><path d="M18 59V31L38 14L58 31V59" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/><path d="M27 59V43C27 37.5 31.9 33 38 33C44.1 33 49 37.5 49 43V59" stroke="currentColor" stroke-width="2.4"/><path d="M38 54C31.5 49.6 31.9 44 35.1 40.5C35.8 44 38.6 43.6 39.8 39.1C45.5 45.2 45.2 50.1 38 54Z" fill="currentColor"/><path d="M18 31L10 38M58 31L66 38M23 59H53" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg></div>
+            <h2>Reserve your spot.</h2><p class="sub">Leave your wallet address to join the whitelist.<br>No connection, no signature — just a record.</p>
+            <form id="whitelistForm" novalidate>
+              <label class="sr-only" for="walletInput">Wallet address</label>
+              <input id="walletInput" name="wallet" type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="0xYourWalletAddress" required
+                style="width:100%;padding:13px 14px;margin-bottom:12px;background:rgba(7,16,13,.6);border:1px solid var(--line);color:#d9e8d2;font:inherit;font-size:11px;letter-spacing:.04em">
+              <button class="crh-action" id="whitelistBtn" type="submit" aria-describedby="terminalLabel"><span class="icon" aria-hidden="true">↓</span><span id="whitelistBtnText">JOIN WHITELIST</span></button>
+            </form>
+            <div class="crh-metrics"><div class="crh-metric"><label id="poolLabel">WHITELIST SPOTS (SAMPLE)</label><strong aria-labelledby="poolLabel">18,472 <small>/ 25,000</small></strong></div><div class="crh-metric"><label id="returnedLabel">JOINED TODAY (SAMPLE)</label><strong class="green" aria-labelledby="returnedLabel">312</strong></div></div>
+            <p class="crh-log"><span class="icon" aria-hidden="true">⌁</span><b aria-hidden="true">&gt;</b><span class="bar" aria-hidden="true"></span><span id="activityText" role="status" aria-live="polite">READY FOR INPUT</span></p>
+          </div>
+          <div class="crh-side">
+            <div class="line">A different kind of<br><strong>treasure map.</strong></div>
+            <div class="line">Every movement is<br><em>visible by design.</em></div>
+            <div class="line">Built for the<br><strong>unreasonably generous.</strong></div>
+            <button class="crh-manifesto-link" data-scroll="help"><span aria-hidden="true">↗</span><span>READ THE MANIFESTO</span></button>
+          </div>
+        </div>
+        <p class="crh-underline"><span aria-hidden="true">↓</span> SCROLL TO INSPECT THE TRAIL <span aria-hidden="true">↓</span></p>
+      </section>
+
+      <section class="crh-section" id="protocol">
+        <div class="crh-section-head">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="15" stroke="currentColor" stroke-width="1.4"/><path d="M17 9v8l6 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <h2>The protocol is the promise.</h2>
+        </div>
+        <p>Incinerator Hood turns opaque protocol surplus into an auditable community signal. Every handoff has a timestamp, a route, and a witness.</p>
+        <div class="crh-steps">
+          <div class="crh-step">
+            <div class="crh-step-top"><b>01</b><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>SPOT THE SURPLUS</h3><p>We watch public pools for value sitting still when it could be doing good.</p>
+          </div>
+          <div class="crh-step">
+            <div class="crh-step-top"><b>02</b><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M4 6h9v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M22 6h-9v16h9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 9v10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+            <h3>OPEN THE LEDGER</h3><p>Anyone can inspect the route before a single token moves.</p>
+          </div>
+          <div class="crh-step">
+            <div class="crh-step-top"><b>03</b><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 3v14M13 17l-5-5M13 17l5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 21h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>RETURN THE SPOILS</h3><p>One deliberate action sends the excess back into the commons.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="crh-section" id="ledger">
+        <div class="crh-section-head">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M9 4h16v26l-4-3-4 3-4-3-4 3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M13 11h8M13 16h8M13 21h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <h2>Nothing hidden in the hedges.</h2>
+        </div>
+        <p>Live receipts from the Sherwood node. The forest remembers every generous act.</p>
+        <div class="crh-step crh-ledger-panel">
+          <div class="crh-ledger-row"><span>PUBLIC LEDGER / LAST 24H</span><span>SAMPLE DATA — NOT LIVE</span></div>
+          <div class="crh-ledger-grid">
+            <span><time datetime="2026-08-13T04:12:09Z">04:12:09</time><br><b>POOL SCAN</b></span>
+            <span><time datetime="2026-08-13T03:49:22Z">03:49:22</time><br><b>+ 2,084 IH</b></span>
+            <span><time datetime="2026-08-13T02:18:41Z">02:18:41</time><br><b>RETURNED</b></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="crh-section" id="help">
+        <div class="crh-section-head">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="15" stroke="currentColor" stroke-width="1.4"/><path d="M13 13a4 4 0 1 1 5.2 3.8c-1.2.5-1.7 1.3-1.7 2.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="17" cy="23" r="1.1" fill="currentColor"/></svg>
+          <h2>Field notes.</h2>
+        </div>
+        <p>IH is a consumer utility for transparent redistribution. Start small. Read everything. Keep your keys close.</p>
+        <p style="margin-top:24px;display:flex;align-items:center;gap:8px;font-size:11px;color:var(--acid)"><span aria-hidden="true">?</span><span>THE SHORT VERSION: TRUST, BUT VERIFY.</span></p>
+      </section>
+    </main>
+    <footer class="crh-footer"><span>IH.01 / SHERWOOD NODE</span><div class="footer-right"><span>CHAIN ID: 001</span><span class="hidden-mobile">LATENCY: 42MS</span><span>ALL SYSTEMS GREEN</span><a href="https://x.com/Incineratorhood" target="_blank" rel="noopener noreferrer">BUILT BY @Incineratorhood</a></div></footer>
+    <div class="crh-toast hidden" id="toast" role="status" aria-live="polite">✓ ADDRESS ADDED TO WHITELIST</div>
+  </div>
+  <script>
+    const panel = document.getElementById("menuPanel");
+    const menuBtn = document.getElementById("menuBtn");
+    const toast = document.getElementById("toast");
+    const activityText = document.getElementById("activityText");
+
+    function toggleMenu(open) {
+      panel.classList.toggle("hidden", !open);
+      menuBtn.textContent = open ? "×" : "☰";
+      menuBtn.setAttribute("aria-expanded", String(open));
+      if (open) panel.querySelector("button").focus();
+    }
+    menuBtn.addEventListener("click", () => toggleMenu(panel.classList.contains("hidden")));
+    document.getElementById("closeMenu").addEventListener("click", () => { toggleMenu(false); menuBtn.focus(); });
+    document.addEventListener("keydown", (e) => {
+      if (panel.classList.contains("hidden")) return;
+      if (e.key === "Escape") { toggleMenu(false); menuBtn.focus(); return; }
+      if (e.key === "Tab") {
+        const items = Array.from(panel.querySelectorAll("button"));
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!panel.classList.contains("hidden") && !panel.contains(e.target) && e.target !== menuBtn) toggleMenu(false);
+    });
+
+    document.querySelectorAll("[data-scroll]").forEach((button) => button.addEventListener("click", () => {
+      document.getElementById(button.dataset.scroll).scrollIntoView({behavior:"smooth",block:"nearest"});
+      toggleMenu(false);
+    }));
+
+    // ---- Whitelist form ----
+    // No wallet connection, no signature request — this just captures the
+    // typed address string. Wire the fetch() call below up to your own
+    // backend / form service (e.g. a serverless function or Airtable) to
+    // actually store submissions.
+    const whitelistForm = document.getElementById("whitelistForm");
+    const walletInput = document.getElementById("walletInput");
+    const whitelistBtn = document.getElementById("whitelistBtn");
+    const whitelistBtnText = document.getElementById("whitelistBtnText");
+
+    whitelistForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const value = walletInput.value.trim();
+      if (!value) {
+        activityText.textContent = "ENTER A WALLET ADDRESS";
+        walletInput.focus();
+        setTimeout(() => { activityText.textContent = "READY FOR INPUT"; }, 2200);
+        return;
+      }
+
+      whitelistBtn.classList.add("armed");
+      whitelistBtn.disabled = true;
+      whitelistBtn.setAttribute("aria-busy", "true");
+      whitelistBtnText.textContent = "SUBMITTING...";
+      activityText.textContent = "SUBMITTING...";
+
+      try {
+        // Example only — replace with your real endpoint:
+        // await fetch("https://your-backend.example.com/whitelist", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify({ wallet: value })
+        // });
+        await new Promise((resolve) => setTimeout(resolve, 900)); // simulated latency
+
+        toast.textContent = "✓ ADDRESS ADDED TO WHITELIST";
+        toast.classList.remove("hidden");
+        setTimeout(() => toast.classList.add("hidden"), 3500);
+        activityText.textContent = "ADDED TO WHITELIST";
+        walletInput.value = "";
+      } catch (err) {
+        activityText.textContent = "SUBMISSION FAILED — TRY AGAIN";
+      } finally {
+        whitelistBtn.classList.remove("armed");
+        whitelistBtn.disabled = false;
+        whitelistBtn.removeAttribute("aria-busy");
+        whitelistBtnText.textContent = "JOIN WHITELIST";
+        setTimeout(() => { activityText.textContent = "READY FOR INPUT"; }, 2600);
+      }
+    });
+  </script>
+</body>
+</html>
